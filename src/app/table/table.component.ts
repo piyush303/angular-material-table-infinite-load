@@ -11,6 +11,7 @@ export class TableComponent implements OnInit {
   start: number = 0;
   limit: number = 15;
   end: number = this.limit + this.start;
+  sticky: boolean = true;
 
   constructor() { }
 
@@ -41,6 +42,10 @@ export class TableComponent implements OnInit {
   updateIndex() {
     this.start = this.end;
     this.end = this.limit + this.start;
+  }
+
+  isSticky() {
+    return this.sticky;
   }
 }
 
